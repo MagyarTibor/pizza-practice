@@ -1,52 +1,47 @@
 [
-    {"id": "one",
+    {"id": 1,
     "name": "Hawaii",
     "ingredients":["pizzaszósz, sonka, ananász, mozzarella sajt"],
-    "picture": "/hawaii.png",
     "price":1000
     
 },
 
-{"id": "two",
+{"id": 2,
     "name": "Margherita",
     "ingredients":["pizzaszósz, paradicsom, mozzarella sajt"],
-    "picture": "/margherita.png",
     "price":1000
 },
 
-{"id": "three",
+{"id": 3,
     "name": "Piedone",
     "ingredients":["pizzaszósz, chilisbab, hagyma, sonka, mozzarella sajt"] ,
-    "picture": "/piedone.png",
     "price":1000
 },
 
-{"id": "four",
+{"id": 4,
     "name": "SonGoKu",
     "ingredients":["pizzaszósz, sonka, gomba, kukorica, mozzarella sajt"],
-    "picture": "/songoku.png",
     "price":1000
     
 },
-{"id": "five",
+{"id": 5,
     "name": "Popeye",
     "ingredients":["pizzaszósz, spenót, csirke, fokhagyma, feta sajt, mozzarella"],
-    "picture": "/popeye.png",
+ 
     "price":1000
     
 },
 
-{"id": "six",
+{"id": 6,
     "name": "Szalámis",
     "ingredients":["pizzaszósz, szalámi, mozzarella sajt"],
-    "picture": "/salami.png",
+    
     "price":1000
     
 },
-{"id": "seven",
+{"id": 7,
     "name": "Carbonara",
     "ingredients":["carbonara alap, sonka, fokhagyma, oregánó, mozzarella sajt"],
-    "picture": "/car.png",
     "price":1000
     
 }]

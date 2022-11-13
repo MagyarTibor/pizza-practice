@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  background: transparent;
+  font-family: inherit;
+}
+a {
+  text-decoration: none;
+}
+a img {
+  border: none;
+}
+
+button,
+a {
+  cursor: pointer;
+  color: inherit;
+}
+
+textarea {
+  resize: none;
+}
+
+button,
+textarea,
+select {
+  border-radius: 0;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+  display: block;
+}
+
+/* CSS reset end */
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.pizza-card {
+  width: 40%;
+  height: 230px;
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: bisque;
+  padding: 15px;
+  border: solid #0b0b0b 3px;
+  border-radius: 5px;
+}
+.cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  background-color: bisque;
+  height: 500px;
+  width: 400px;
+}
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  background-color: gray;
+  padding: 15px 0 15px 0;
+}
+input {
+  width: 45px;
+  border: 0px;
+  align-self: center;
+  background-color: rgb(243, 240, 234);
+  text-align: left;
+  height: 30px;
+  width: 80%;
+  font-size: 16px;
+  margin-top: 7px;
+  padding: 5px;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  margin-top: 100px;
+}
+
+.alert {
+  display: none;
+}
+
+.alertOpen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  z-index: 99;
+  background-color: #f9eec9;
+  color: #58483a;
+  width: 600px;
+  height: 400px;
+  border: solid #58483a 5px;
+  text-align: center;
+  font-family: "Lobster", cursive;
+  box-shadow: 15px 20px 6px rgba(87, 74, 56, 0.822);
+}
+
+.conf {
+  width: 30%;
+  height: 30px;
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 20px;
+}
