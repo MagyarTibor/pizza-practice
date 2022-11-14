@@ -4,6 +4,8 @@ rootElement.insertAdjacentHTML("beforeend", `<div class="wrapper"></div>`);
 
 const pageElement = document.querySelector(".wrapper");
 
+let finalOrder = [];
+
 const pizzaComponent = (name, ingredients, price) => `
   <div class="pizza-card pizzaCard-${name}">
   <img src="img/${name}.png" alt="">
@@ -114,8 +116,16 @@ orderButton.addEventListener("click", function () {
 
   let form = rootElement.querySelector("#add-data");
   form.reset();
-  let order = rootElement.querySelector(".pizzas");
-  order.innerHTML = "";
+  let order = document.querySelectorAll(".pizzas>div>h2");
+
+  order.forEach((el) => {
+    finalOrder.push(el.innerText);
+  });
+
+  console.log(finalOrder);
+  let delOrder = document.querySelector(".pizzas");
+  delOrder.innerHTML = "";
+
   let numReset = rootElement.querySelectorAll(".pizzaAmount");
   numReset.forEach((elem) => {
     elem.value = "";
