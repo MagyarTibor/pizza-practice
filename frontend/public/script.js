@@ -1,7 +1,6 @@
 const rootElement = document.querySelector("#root");
 
-const pageComponent = () => `<div class="wrapper"></div>`;
-rootElement.insertAdjacentHTML("beforeend", pageComponent());
+rootElement.insertAdjacentHTML("beforeend", `<div class="wrapper"></div>`);
 
 const pageElement = document.querySelector(".wrapper");
 
@@ -61,10 +60,23 @@ fetch("/pizzas")
         cartList.insertAdjacentHTML(
           "beforeend",
           `
-      <div>
+      <div class="cart-pizza-${pizzaName}-${number}">
         <h2 class="selected${pizzaName}">${number}db ${pizzaName}</h2>
+        <button class="delete-pizza-${pizzaName}-${number}">X</button>
       </div>`
         );
+        //kinyírni a forEachet és az Allt
+        const deleteBtnPizza = document.querySelectorAll(
+          `.delete-pizza-${pizzaName}-${number}`
+        );
+        deleteBtnPizza.forEach((button) => {
+          button.addEventListener("click", () => {
+            const deleteFunction = document.querySelector(
+              `.cart-pizza-${pizzaName}-${number}`
+            );
+            deleteFunction.remove();
+          });
+        });
       });
     });
   });
@@ -105,7 +117,9 @@ orderButton.addEventListener("click", function () {
   let order = rootElement.querySelector(".pizzas");
   order.innerHTML = "";
   let numReset = rootElement.querySelectorAll(".pizzaAmount");
-  numReset.clearInput();
+  numReset.forEach((elem) => {
+    elem.value = "";
+  });
 });
 cancelbutton.addEventListener("click", function () {
   alert.classList.remove("alertOpen");
