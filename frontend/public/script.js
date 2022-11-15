@@ -26,8 +26,7 @@ const userComponent = () =>
         <div class="pizzas"></div>
         </div>
         <form id="add-data">
-          <input type="text" name="name" id="name" placeholder="Vezetéknév:" />
-          <input type="text" name="surname" id="surname" placeholder="Keresztnév:" />
+          <input type="text" name="name" id="name" placeholder="Név:" />
           <input type="text" name="zip" id="zip" placeholder="Irányítószám:"  />
           <input type="text" name="city" id="city" placeholder="Város:" />
           <input type="text" name="street" id="street" placeholder="Utca:" />
@@ -114,22 +113,31 @@ popUpWinConfOrder.addEventListener("click", function () {
 orderButton.addEventListener("click", function () {
   alert.classList.remove("alertOpen");
 
-  let form = rootElement.querySelector("#add-data");
-  form.reset();
   let order = document.querySelectorAll(".pizzas>div>h2");
 
   order.forEach((el) => {
     finalOrder.push(el.innerText);
   });
 
-  console.log(finalOrder);
-  let delOrder = document.querySelector(".pizzas");
-  delOrder.innerHTML = "";
-
-  let numReset = rootElement.querySelectorAll(".pizzaAmount");
-  numReset.forEach((elem) => {
-    elem.value = "";
-  });
+  const sendData = {
+    name: document.querySelector("#name").value,
+    zip: document.querySelector("#zip").value,
+    city: document.querySelector("#city").value,
+    street: document.querySelector("#street").value,
+    houseNumber: document.querySelector("#houseNumber").value,
+    phoneNumber: document.querySelector("#phoneNumber").value,
+    order: finalOrder,
+    date: new Date(),
+  };
+  fetch(`/`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(sendData),
+  })
+    .then((res) => res.json())
+    .then((resJson) => location.reload());
 });
 cancelbutton.addEventListener("click", function () {
   alert.classList.remove("alertOpen");

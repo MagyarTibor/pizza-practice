@@ -1,1 +1,12 @@
-{}
+{
+  "name": "Tibor",
+  "zip": "",
+  "city": "Hamburg",
+  "street": "",
+  "houseNumber": "",
+  "phoneNumber": "",
+  "order": [
+    "2db Hawaii"
+  ],
+  "date": "2022-11-15T18:08:46.054Z"
+}
