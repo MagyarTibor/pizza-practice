@@ -1,12 +1,14 @@
 {
   "name": "Tibor",
-  "zip": "",
+  "zip": "56458",
   "city": "Hamburg",
-  "street": "",
-  "houseNumber": "",
+  "street": "JHGH",
+  "houseNumber": "21",
   "phoneNumber": "",
   "order": [
-    "2db Hawaii"
+    "Hawaii 3db ",
+    "Margherita 3db "
   ],
-  "date": "2022-11-15T18:08:46.054Z"
+  "price": " 6000 HUF",
+  "date": "2022-11-20T18:27:00.219Z"
 }

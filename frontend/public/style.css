@@ -38,6 +38,10 @@ li {
 
 /* CSS reset end */
 
+body {
+  background-color: #58483a;
+}
+
 #root {
   display: flex;
   align-items: center;
@@ -62,14 +66,14 @@ img {
   border-radius: 5px;
 }
 .cart {
+  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 20px;
-
   background-color: bisque;
-  height: 500px;
+  height: auto;
   width: 400px;
 }
 form {
@@ -78,9 +82,11 @@ form {
   justify-content: center;
   flex-direction: column;
   width: 90%;
-  margin: 0 auto;
+  margin: 0 auto 20px;
   background-color: gray;
   padding: 15px 0 15px 0;
+  border-radius: 10px;
+  box-shadow: 11px 13px 15px 0px rgba(0, 0, 0, 0.34);
 }
 input {
   width: 45px;
@@ -95,15 +101,26 @@ input {
   padding: 5px;
 }
 
-.wrapper {
+.wrapperleft {
   display: flex;
   flex-wrap: wrap;
-  width: 60%;
+  width: 75%;
+
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 100px;
+}
+
+.wrapperright {
+  width: 35%;
+  display: flex;
+  flex-wrap: wrap;
 
   justify-content: center;
   align-items: center;
   margin-right: 20px;
-  margin-top: 100px;
+  margin-bottom: 40%;
 }
 
 .alert {
@@ -116,16 +133,17 @@ input {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  position: absolute;
+  position: fixed;
   z-index: 99;
   background-color: #f9eec9;
   color: #58483a;
   width: 600px;
   height: 400px;
-  border: solid #58483a 5px;
+  border: solid #0b0a0a 5px;
   text-align: center;
   font-family: "Lobster", cursive;
   box-shadow: 15px 20px 6px rgba(87, 74, 56, 0.822);
+  margin-bottom: 40%;
 }
 
 .conf {
@@ -138,4 +156,40 @@ input {
   justify-content: center;
   margin: 0;
   padding: 20px;
+}
+.cartPizza {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-direction: row;
+}
+.cdpb {
+  margin-left: 10px;
+  text-align: center;
+  background-color: crimson;
+  border-radius: 20%;
+  width: 18px;
+}
+.pre-order-button {
+  width: 30%;
+  text-align: center;
+}
+
+h2 {
+  font-size: medium;
+}
+
+.orderTitle {
+  font-size: larger;
+}
+
+.pizzaInfo input {
+  width: 50px;
+}
+
+.total {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-direction: row;
 }
